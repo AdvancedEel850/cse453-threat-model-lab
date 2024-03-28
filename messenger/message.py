@@ -26,6 +26,7 @@ class Message:
         self._text = "Empty"
         self._author = ""
         self._date = ""
+        self._control = "Public"
         self._id = Message._id_next
         Message._id_next += 1
 
@@ -33,8 +34,9 @@ class Message:
     # MESSAGE NON-DEFAULT CONSTRUCTOR
     # Create a message and fill it
     ##################################################   
-    def __init__(self, text, author, date):
+    def __init__(self, text, author, date, control):
         self._text = text
+        self._control = control
         self._author = author
         self._date = date
         self._id = Message._id_next
@@ -47,6 +49,13 @@ class Message:
     ##################################################   
     def get_id(self):
         return self._id
+    
+    ##################################################
+    # MESSAGE :: GET Confidentiality
+    # Determine the confidentiality of the message
+    ##################################################   
+    def get_conf(self):
+        return self._control
 
     ##################################################
     # MESSAGE :: DISPLAY PROPERTIES

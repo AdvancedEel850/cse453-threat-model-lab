@@ -4,7 +4,7 @@ Confidential|Seaman Smith|5 December 1941|I think I will sleep on the beach Satu
 Public|Walter the Weatherman|7 December 1941|The weather will be perfect, not a cloud in the sky
 Public|President Franklin D. Roosevelt|8 December 1941|A day which will live in infamy
 Confidential|Lt. Kenneth Taylor|9 December 1941|I know for certain I shot down two planes or perhaps more
-Secret|Fleet Admiral Chester W. Nimitz|10 December 1941|Good thing our carriers were out to sea on Sunday!
+Public|Fleet Admiral Chester W. Nimitz|10 December 1941|Good thing our carriers were out to sea on Sunday!
 Privileged|Captain Buckmaster|7 June 1942|I doubt those little airplanes can sink my ship
 Privileged|General George S. Patton|1 February 1943|May God have mercy upon my enemies, because I won't!
 Secret|J. Robert Oppenheimer|16 July, 1945|Now I am become Death, the destroyer of worlds.
