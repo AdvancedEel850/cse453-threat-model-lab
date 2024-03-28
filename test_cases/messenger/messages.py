@@ -7,8 +7,8 @@
 #    This class stores the notion of a collection of messages
 ########################################################################
 
-import message
-import control
+from messenger import message
+from messenger import control
 
 ##################################################
 # MESSAGES

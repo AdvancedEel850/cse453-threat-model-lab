@@ -27,3 +27,6 @@ def determine_security():
 class test_req1(unittest.TestCase):
     def test_sec(self):
         self.assertTrue(determine_security)
+
+test = test_req1()
+test.test_sec()

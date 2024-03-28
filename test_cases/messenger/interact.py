@@ -7,7 +7,7 @@
 #    This class allows one user to interact with the system
 ########################################################################
 
-import control
+from messenger import control
 
 ###############################################################
 # USER
