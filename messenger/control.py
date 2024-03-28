@@ -11,8 +11,8 @@ class Control:
     # MESSAGES :: ACCESS
     # Determine if a user has access to a message.
     ##################################################
-    def read_access(self, contro, message):
-        return self._control.index(message.get_conf()) <= self._control.index(contro)
+    def read_access(self, control, message):
+        return self._control.index(message) <= self._control.index(control)
     
-    def write_access(self, contro, message):
-        return self._control.index(message.get_conf()) >= self._control.index(contro)
+    def write_access(self, control, message):
+        return self._control.index(message) >= self._control.index(control)
