@@ -1,0 +1,1 @@
+# This will cover requirement 3: Each subject (user) wishing to gain access to the asset must have security permission

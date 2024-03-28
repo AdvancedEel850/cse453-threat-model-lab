@@ -1,0 +1,1 @@
+# This will cover requirement 2: Program must have each asset protected
