@@ -22,8 +22,8 @@ class Messages:
     ##################################################
     def __init__(self, filename):
         self._messages = []
-        self._read_messages(filename)
         self._control_object = control.Control()
+        self._read_messages(filename)
 
     ##################################################
     # MESSAGES :: DISPLAY
@@ -31,7 +31,7 @@ class Messages:
     ################################################## 
     def display(self, control):
         for m in self._messages:
-            if self._control_object.read_access(control, m): 
+            if self._control_object.read_access(control, m.get_conf()): 
                 m.display_properties()
 
     ##################################################
@@ -52,9 +52,9 @@ class Messages:
     ################################################## 
     def update(self, id, text, control):
         for m in self._messages:
-            if m.get_id() == id and self._control_object.write_access(control, m):
+            if m.get_id() == id and self._control_object.write_access(control, m.get_conf()):
                 m.update_text(text)
-            elif m.get_id() == id and not self._control_object.write_access(control, m):
+            elif m.get_id() == id and not self._control_object.write_access(control, m.get_conf()):
                 print("Not Accessible.")
 
     ##################################################
@@ -63,15 +63,18 @@ class Messages:
     ################################################## 
     def remove(self, id, control):
         for m in self._messages:
-            if m.get_id() == id and self._control_object.write_access(control, m):
+            if m.get_id() == id and self._control_object.write_access(control, m.get_conf()):
                 m.clear()
 
     ##################################################
     # MESSAGES :: ADD
     # Add a new message
     ################################################## 
-    def add(self, text, author, date, control):
-        m = message.Message(text, author, date, control)
+    def add(self, text, author, date, controlm, controlself):
+        if not self._control_object.write_access(controlself, controlm):
+            print("not able to write")
+            return
+        m = message.Message(text, author, date, controlm)
         self._messages.append(m)
 
     ##################################################
@@ -83,7 +86,7 @@ class Messages:
             with open(filename, "r") as f:
                 for line in f:
                     text_control, author, date, text = line.split('|')
-                    self.add(text.rstrip('\r\n'), author, date, text_control)
+                    self.add(text.rstrip('\r\n'), author, date, text_control, "Public")
 
         except FileNotFoundError:
             print(f"ERROR! Unable to open file \"{filename}\"")

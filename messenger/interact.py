@@ -80,7 +80,8 @@ class Interact:
         self._p_messages.add(self._prompt_for_line("message"),
                              self._username,
                              self._prompt_for_line("date"), 
-                             self._prompt_for_line(f"Confidentiality {self.possible_write_control(self._control)}"))
+                             self._prompt_for_line(f"Confidentiality {self.possible_write_control(self._control)}"),
+                             self._control)
         
     def possible_write_control(self, cont):
         write = []
