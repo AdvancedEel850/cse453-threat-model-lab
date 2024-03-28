@@ -7,7 +7,6 @@
 #    This class allows one user to interact with the system
 ########################################################################
 
-import messages
 import control
 
 ###############################################################
