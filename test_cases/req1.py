@@ -13,6 +13,8 @@ import unittest
 from messenger import interact as i
 
 
+# making a function to look at all the users permisions, and see if they are in the 
+# list of available user permissions.
 def determine_security():
     access = i.control.Control()
 
@@ -23,10 +25,14 @@ def determine_security():
         else:
             return True
         
-
+# making a class so unittest works
 class test_req1(unittest.TestCase):
     def test_sec(self):
         self.assertTrue(determine_security)
 
+# running class (the test that the unittest uses)
 test = test_req1()
 test.test_sec()
+
+if __name__ == "__main__":
+    unittest.main()
