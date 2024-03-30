@@ -8,3 +8,5 @@ sys.path.insert(1, 'C:/Users/Junky/Desktop/Winter_2024/computer_security/wk12/cs
 # this is for the file itself
 import unittest
 
+# THIS REQUIREMENT NEEDS TO IMPORT THE MESSAGES TXT FILE
+# ... but import does not seem to work, and open will not work because not in same folder.
