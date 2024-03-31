@@ -3,8 +3,6 @@
 
 
 # this is just to make the unittest thing to work
-import sys
-sys.path.insert(1, 'C:/Users/Junky/Desktop/Winter_2024/computer_security/wk12/cse453-threat-model-lab/test_cases')
 
 
 
